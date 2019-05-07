@@ -10,6 +10,10 @@
 <style>
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background: #E0EAFC;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 table.bptable {
     border-collapse: separate;
@@ -47,60 +51,134 @@ span.K {
 
 <body>
 <table class="bptable">
-<tr class="pad"> <td> </td> </tr>
-<tr> <th> AL East </th> </th>  <th> Yankees </th> <td>Original(1974): <span class="R">R</span> <span class="K">K</span>, 2009:  <span class="R">R</span> <span class="L">L</span> <span class="C">C</span><span class="K">K</span> </td> </tr>
-<tr> <th> </th>   <th> Red Sox </th> <td> <span class="R">R</span> <span class="L">L</span> <span class="C">C</span><span class="K">K</span> </td> </tr>
-<tr> <th> </th>   <th> Tampa Bay </th> <td> <span class="R">R</span> <span class="L">L</span> <span class="C">C</span><span class="K">K</span> </td> </tr>
-<tr> <th> </th>   <th> Orioles </th> <td> <span class="R">R</span> <span class="K">K</span> </td> </tr>
-<tr> <th> </th>   <th> Blue Jays </th> <td> <span class="R">R</span> </tr>
+<tr> <th> AL East </th> <th> Yankees </th> <td>Original(1974)</td> <td id="Yankees1974">  </td> </tr>
+<tr> <th> </th> <th> </th> <td> 2009 </td> <td id="Yankees2009">  </td> </tr>
+<tr> <th> </th> <th> Red Sox </th> <td> Fenway </td> <td id="Fenway"> </td> </tr>
+<tr> <th> </th> <th> Tampa Bay </th> <td> Tropicana </td> <td id="Tropicana">  </td> </tr>
+<tr> <th> </th> <th> Orioles </th> <td> Camden Yards </td> <td id="CamdenYards">   </td> </tr>
+<tr> <th> </th> <th> Blue Jays </th> <td> Rogers </td> <td id="Rogers">  </td> </tr>
 
-<tr class="pad"> <td> </td> </tr>
-<tr> <th> AL Central </th> <th> Tigers </th> <td> Tiger Stadium: <span class="R">R</span>, Comerica Park: <span class="R">R</span> <span class="L">L</span> <span class="C">C</span><span class="K">K</span> </td> </tr> 
-<tr> <th> </th>    <th> White Sox </th> <td> Comisky: <span class="R">R</span>, new: <span class="R">R</span>  </td> </tr>
-<tr> <th> </th>  <th> Indians </th>  </tr>
-<tr> <th> </th>   <th> Twins </th> </tr>
-<tr> <th> </th>   <th> Royals </th>   </tr>
+<tr class="pad"> <td></td></tr>
+<tr> <th> AL Central </th> <th> Tigers </th> <td> Tiger Stadium </td> <td id="Tiger">  </td> </tr> 
+<tr> <th> </th>  <th>  </th> <td> Comerica </td> <td id="Comerica">   </td> </tr>
+<tr> <th> </th>    <th> White Sox </th> <td> Comiskey </td> <td id="Comiskey"> </td> </tr>
+<tr> <th> </th>  <th>  </th> <td> new </td> <td id="WSoxNew"> </td> </tr>
+<tr> <th> </th>  <th> Indians </th> <td>  </td>  </tr>
+<tr> <th> </th>   <th> Twins </th> <td>  </td> </tr>
+<tr> <th> </th>   <th> Royals </th>  <td>  </td>  </tr>
 
-<tr class="pad"> <td> </td> </tr>
-<tr> <th> AL West </th> <th> Astros </th> </tr> 
-<tr> <th> </th>    <th> Mariners  </th> <td> old: <span class="K">K</span> </td> </tr>
-<tr> <th> </th>  <th> Rangers </th>  </tr>
-<tr> <th> </th>   <th> Athletics </th> <td> <span class="L">L</span> <span class="C">C</span><span class="K">K</span> </td> </tr>
-<tr> <th> </th>   <th> Angels </th> <td> <span class="K">K</span> </td> </tr>
+<tr class="pad"> <td></td></tr>
+<tr> <th> AL West </th> <th> Astros </th> <td>  </td> </tr> 
+<tr> <th> </th>    <th> Mariners  </th> <td>  </td>  </tr>
+<tr> <th> </th>  <th> Rangers </th> <td>  </td>  </tr>
+<tr> <th> </th>   <th> Athletics </th> <td>  </td> <td id="Athletics"> </td> </tr>
+<tr> <th> </th>   <th> Angels </th> <td>  </td> </tr>
 
-<tr class="pad"> <td> </td> </tr>
-<tr> <th> NL East </th> <th> Mets </th> <td> Shea: <span class="R">R</span> <span class="K">K</span>, Citi: <span class="R">R</span> <span class="L">L</span> <span class="C">C</span><span class="K">K</span> </td></tr> 
-<tr> <th> </th>    <th> Nationals </th> <td> <span class="R">R</span> <span class="L">L</span> <span class="C">C</span><span class="K">K</span> </td> </tr>
-<tr> <th> </th>  <th> Phillies </th> <td> <span class="R">R</span> <span class="L">L</span> <span class="C">C</span><span class="K">K</span> </td> </tr>
-<tr> <th> </th>   <th> Marlins </th>  </tr>
-<tr> <th> </th>   <th> Braves </th> </tr>
+<tr class="pad"> <td></td></tr>
+<tr> <th> NL East </th> <th> Mets </th> <td> Shea </td> <td id="Shea"> </td></tr> 
+<tr> <th>  </th> <th>  </th> <td> CitiField </td> <td id="Citifield">  </td></tr> 
+<tr> <th> </th>  <th> Nationals </th> <td>  </td> <td id="Nationals"> </td> </tr>
+<tr> <th> </th>  <th> Phillies </th> <td>  </td> <td id="Phillies">  </td> </tr>
+<tr> <th> </th>   <th> Marlins </th> <td>  </td>  <td></td></tr>
+<tr> <th> </th>   <th> Braves </th> <td>  </td> <td></td></tr>
 
-<tr class="pad"> <td> </td> </tr>
-<tr> <th> NL Central </th> <th> Pirates </th> <td> <span class="R">R</span> <span class="L">L</span> <span class="C">C</span><span class="K">K</span> </td></tr> 
-<tr> <th> </th>    <th> Cardinals  </th> <td> <span class="R">R</span> </td> </tr>
-<tr> <th> </th>  <th> Cubs </th> <td> <span class="R">R</span> </td> </tr>
-<tr> <th> </th>   <th> Reds </th> <td> <span class="R">R</span> </td> </tr>
-<tr> <th> </th>   <th> Brewers </th> </tr>
+<tr class="pad"> <td></td></tr>
+<tr> <th> NL Central </th> <th> Pirates </th> <td> </td> <td id="Pirates">  </td></tr> 
+<tr> <th> </th>    <th> Cardinals  </th> <td>  </td> <td id="Cardinals"> </td> </tr>
+<tr> <th> </th>  <th> Cubs </th>  <td>  </td> <td id="Wrigley"> </td> </tr>
+<tr> <th> </th>   <th> Reds </th> <td>  </td> <td id="Riverfront">  </td> </tr>
+<tr> <th> </th>   <th> Brewers </th> <td></td></tr>
 
-<tr class="pad"> <td> </td> </tr>
-<tr> <th> NL West </th> <th> Giants </th> </tr> 
-<tr> <th> </th>    <th> Dodgers  </th> <td> <span class="K">K</span> </td> </tr>
-<tr> <th> </th>  <th> Diamondbacks </th>  </tr>
-<tr> <th> </th>   <th> Padres </th>  </tr>
-<tr> <th> </th>   <th> Rockies </th> </tr>
+<tr class="pad"> <td></td></tr>
+<tr> <th> NL West </th> <th> Giants </th> <td>  </td> <td></td></tr> 
+<tr> <th> </th>    <th> Dodgers  </th> <td>  </td> <td></td> </tr>
+<tr> <th> </th>  <th> Diamondbacks </th> <td>  </td> <td></td> </tr>
+<tr> <th> </th>   <th> Padres </th> <td>  </td> <td></td> </tr>
+<tr> <th> </th>   <th> Rockies </th> <td>  </td> <td></td> </tr>
 
-<tr class="pad"> <td> </td> </tr>
-<tr> <th> Grapefruit </th> <th> Yankees </th> <td> <span class="R">R</span> <span class="K">K</span> </td> </tr> 
-<tr> <th> </th>    <th> Phillies  </th> <td> <span class="R">R</span>  </td> </tr>
-<tr> <th> </th>  <th> Blue Jays </th> <td> <span class="R">R</span>  </td> </tr>
-<tr> <th> </th>   <th> Tigers </th> <td> <span class="R">R</span> <span class="K">K</span> </td></tr>
-<tr> <th> </th>   <th> Red Sox </th> <td> <span class="L">L</span> <span class="C">C</span><span class="K">K</span> </td></tr>
-<tr> <th> </th>   <th> Twins </th> <td> <span class="L">L</span> </td></tr>
+<tr class="pad"> <td></td></tr>
+<tr> <th> Grapefruit </th> <th> Yankees </th> <td> Steinbrenner </td> <td id="Steinbrenner"> </td> </tr> 
+<tr> <th> </th>    <th> Phillies  </th> <td>  </td> <td id="FL_Phillies">  </td> </tr>
+<tr> <th> </th>  <th> Blue Jays </th> <td>  </td> <td id="FL_Toronto">  </td> </tr>
+<tr> <th> </th>  <th> Twins </th> <td>  </td> <td id="FL_Twins">  </td> </tr>
+<tr> <th> </th>   <th> Tigers </th> <td> Joker Marchant </td> <td id="JokerMarchant">  </td></tr>
+<tr> <th> </th>   <th> Red Sox </th> <td>  </td> <td id="FL_RedSox">  </td></tr>
 
-<tr class="pad"> <td> </td> </tr>
-<tr> <th> Minors </th> <th> (AA) Portland Seadogs </th> <td> <span class="R">R</span> <span class="L">L</span> <span class="C">C</span><span class="K">K</span> </td></tr> 
-<tr> <th> </th>    <th> (CanAm) New Jersey Jackals </th> <td> <span class="R">R</span> <span class="L">L</span> <span class="C">C</span><span class="K">K</span> </td> </tr>
-
+<tr class="pad"> <td></td></tr>
+<tr> <th> Minors </th> <th> (AA) Portland Seadogs </th> <td>  </td> <td id="Seadogs"> </td></tr> 
+<tr> <th> </th>  <th> (CanAm) New Jersey Jackals </th> <td> Yogi Berra </td> <td id="Jackals">  </td> </tr>
 </table>
+
+<script content="text/javascript">
+    var BallparksDB = [
+        {
+            name: 'R',
+            parks: [
+                'Yankees1974', 'Yankees2009', 'Fenway', 'Tropicana', 'CamdenYards', 'Rogers', 
+                'Tiger', 'Comerica', 'Comiskey', 'WSoxNew',
+                'Shea', 'Citifield', 'Nationals', 'Phillies',
+                'Pirates', 'Cardinals', 'Wrigley', 'Riverfront',
+                'Steinbrenner', 'FL_Phillies', 'FL_Toronto', 'JokerMarchant',
+                'Seadogs', 'Jackals'
+            ]
+        },
+        {
+            name: 'K',
+            parks: [
+                'Yankees1974', 'Yankees2009', 'Fenway', 'Tropicana', 'CamdenYards', 
+                'Comerica',
+                'Athletics',
+                'Shea', 'Citifield', 'Nationals', 'Phillies',
+                'Pirates',
+                'Steinbrenner', 'JokerMarchant', 'FL_RedSox',
+                'Seadogs', 'Jackals'
+            ]
+        },
+        {
+            name: "L",
+            parks: [
+                'Yankees2009', 'Fenway', 'Tropicana',
+                'Comerica',
+                'Athletics',
+                'Citifield', 'Nationals', 'Phillies',
+                'Pirates',
+                'FL_RedSox','FL_Twins',
+                'Seadogs', 'Jackals'
+            ]
+        },
+        {
+            name: "C",
+            parks: [
+                'Yankees2009', 'Fenway', 'Tropicana',
+                'Comerica',
+                'Athletics',
+                'Citifield', 'Nationals', 'Phillies',
+                'Pirates',
+                'FL_RedSox',
+                'Seadogs', 'Jackals'
+            ]
+        }
+    ];
+    function initPage(){
+        console.log(`hello`);
+        var el;
+        BallparksDB.forEach( p => {
+            console.log(`doing ${p.name}`);
+            p.parks.forEach( t => {
+                el = document.getElementById(t);
+                if (el) {
+                    el.innerHTML += `<span class="${p.name}"> ${p.name} </span>`
+                }
+            })
+        })
+    }
+    if ( document.readyState !== 'loading' ) {
+        console.log( 'document is already ready, just execute code here' );
+        initPage();
+    } else {
+    document.addEventListener('DOMContentLoaded', initPage );
+    }
+</script>
 </body>
+
 </html>
