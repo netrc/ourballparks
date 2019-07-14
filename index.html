@@ -34,6 +34,9 @@ span {
 tr.pad {
     height: 10px;
 }
+td.allFamily {
+  background: #666;
+}
 span.R {
     background: #1b12a3;
 }
@@ -160,17 +163,23 @@ span.K {
         }
     ];
     function initPage(){
-        console.log(`hello`);
-        var el;
+        let allBallparks={};
         BallparksDB.forEach( p => {
             console.log(`doing ${p.name}`);
             p.parks.forEach( t => {
-                el = document.getElementById(t);
-                if (el) {
+                t in allBallparks ? allBallparks[t] += 1 :  allBallparks[t] = 1;  // keep track of all Parks
+                if (let el = document.getElementById(t)) {
                     el.innerHTML += `<span class="${p.name}"> ${p.name} </span>`
                 }
             })
-        })
+        });
+        for (let b in allBallparks) {
+          if {allBallparks[b] == 4) {
+            if (let el = document.getElementById(t)) {
+              el.classList.add("allFamily");
+            }
+          }
+       }
     }
     if ( document.readyState !== 'loading' ) {
         //console.log( 'document is already ready, just execute code here' );
