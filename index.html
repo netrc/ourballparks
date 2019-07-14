@@ -163,19 +163,19 @@ span.K {
         }
     ];
     function initPage(){
-        let allBallparks={};
+        let el, allBallparks={};
         BallparksDB.forEach( p => {
             console.log(`doing ${p.name}`);
             p.parks.forEach( t => {
                 t in allBallparks ? allBallparks[t] += 1 :  allBallparks[t] = 1;  // keep track of all Parks
-                if (let el = document.getElementById(t)) {
+                if (el = document.getElementById(t)) {
                     el.innerHTML += `<span class="${p.name}"> ${p.name} </span>`
                 }
             })
         });
         for (let b in allBallparks) {
           if {allBallparks[b] == 4) {
-            if (let el = document.getElementById(t)) {
+            if (el = document.getElementById(t)) {
               el.classList.add("allFamily");
             }
           }
