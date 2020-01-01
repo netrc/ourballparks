@@ -112,82 +112,8 @@ span.K {
 <tr> <th> </th>  <th> (CanAm) New Jersey Jackals </th> <td> Yogi Berra </td> <td id="Jackals">  </td> </tr>
 </table>
 
-<script content="text/javascript">
-    var BallparksDB = [
-        {
-            name: 'R',
-            parks: [
-                'Yankees1974', 'Yankees2009', 'Fenway', 'Tropicana', 'CamdenYards', 'Rogers', 
-                'Tiger', 'Comerica', 'Comiskey', 'WSoxNew',
-                'Shea', 'Citifield', 'Nationals', 'Phillies',
-                'Pirates', 'Cardinals', 'Wrigley', 'Riverfront',
-                'Steinbrenner', 'FL_Phillies', 'FL_Toronto', 'JokerMarchant',
-                'Seadogs', 'Jackals'
-            ]
-        },
-        {
-            name: 'K',
-            parks: [
-                'Yankees1974', 'Yankees2009', 'Fenway', 'Tropicana', 'CamdenYards', 
-                'Comerica',
-                'MarinersOld', 'Athletics',
-                'Shea', 'Citifield', 'Nationals', 'Phillies',
-                'Pirates',
-                'Steinbrenner', 'JokerMarchant', 'FL_RedSox',
-                'Seadogs', 'Jackals'
-            ]
-        },
-        {
-            name: "L",
-            parks: [
-                'Yankees2009', 'Fenway', 'Tropicana', 'CamdenYards',
-                'Comerica',
-                'Athletics',
-                'Citifield', 'Nationals', 'Phillies',
-                'Pirates',
-                'FL_RedSox','FL_Twins',
-                'Seadogs', 'Jackals'
-            ]
-        },
-        {
-            name: "C",
-            parks: [
-                'Yankees2009', 'Fenway', 'Tropicana', 'CamdenYards',
-                'Comerica',
-                'Athletics',
-                'Citifield', 'Nationals', 'Phillies',
-                'Pirates',
-                'FL_RedSox',
-                'Seadogs', 'Jackals'
-            ]
-        }
-    ];
-    function initPage(){
-        let el, allBallparks={};
-        BallparksDB.forEach( p => {
-            console.log(`doing ${p.name}`);
-            p.parks.forEach( t => {
-                t in allBallparks ? allBallparks[t] += 1 :  allBallparks[t] = 1;  // keep track of all Parks
-                if (el = document.getElementById(t)) {
-                    el.innerHTML += `<span class="${p.name}"> ${p.name} </span>`
-                }
-            })
-        });
-        for (let b in allBallparks) {
-          if (allBallparks[b] == 4) {
-            if (el = document.getElementById(b)) {
-              el.classList.add("allFamily");
-            }
-          }
-       }
-    }
-    if ( document.readyState !== 'loading' ) {
-        //console.log( 'document is already ready, just execute code here' );
-        initPage();
-    } else {
-    document.addEventListener('DOMContentLoaded', initPage );
-    }
-</script>
+<script type=module src="browser_main.js"></script>
+
 </body>
 
 </html>
