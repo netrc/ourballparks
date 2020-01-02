@@ -49,4 +49,6 @@ const BallparksDB = [
     }
 ]
 
-export { BallparksDB }
+const getBallparksDB = () => BallparksDB
+
+export { getBallparksDB }
