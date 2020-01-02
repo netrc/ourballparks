@@ -1,16 +1,18 @@
 'use strict';  
 
-import { BallparksDB } from './ballparksDB.js'
+import { getBallparksDB } from './ballparksDB.js'
 import * as dbt from './dbTools.js'
 
 console.log(`cli main.js`)
 
+const BallparksDB = getBallparksDB()
 const ndb = dbt.normalize(BallparksDB)
 console.dir(ndb)
 
 const ndbp = dbt.countp(ndb)
 console.dir(ndbp)
 
-const visit4 = dbt.oFilter( ndbp, (o,p) => o[p]==4 ? p : null )
-console.dir(visit4)
+const visitedBy4 = (o,p) => o[p]==4 ? p : null
+const bparksVisitedByAll = dbt.oFilter( ndbp, visitedBy4 )
+console.dir(bparksVisitedByAll)
 
