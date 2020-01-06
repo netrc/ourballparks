@@ -11,7 +11,16 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #78ab0b;  /* fallback for old browsers */
-    background: linear-gradient(90deg, rgba(138,148,99,1) 0%, rgba(176,210,76,1) 35%, rgba(120,171,11,1) 100%);
+    background: linear-gradient(
+  to bottom,
+  #5d9634,
+  #5d9634 50%,
+  #538c2b 50%,
+  #538c2b
+);
+/* The rectangle in which to repeat. 
+   It can be fully wide in this case */
+background-size: 100% 20px;
 }
 table.bptable {
     border-collapse: separate;
